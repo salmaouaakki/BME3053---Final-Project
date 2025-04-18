@@ -16,7 +16,7 @@ jobs:
       - name: Set up Kaggle API token
         run: |
           mkdir -p ~/.kaggle
-          echo "${{ secrets.KAGGLE_JSON }}" > ~/.kaggle/kaggle.json
+          echo '${{ secrets.KAGGLE_JSON }}' > ~/.kaggle/kaggle.json
           chmod 600 ~/.kaggle/kaggle.json
       
       # Step 3: Install Kaggle API
