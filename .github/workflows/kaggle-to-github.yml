@@ -1,0 +1,39 @@
+name: Kaggle to GitHub Dataset
+on:
+  push:
+    branches:
+      - main  # or any other branch you want the action to run on
+
+jobs:
+  download-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout code from GitHub repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Kaggle API token
+      - name: Set up Kaggle API token
+        run: |
+          mkdir -p ~/.kaggle
+          echo "${{ secrets.KAGGLE_JSON }}" > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
+      
+      # Step 3: Install Kaggle API
+      - name: Install Kaggle API
+        run: |
+          pip install kaggle
+
+      # Step 4: Download the dataset from Kaggle
+      - name: Download Kaggle dataset
+        run: |
+          kaggle datasets download -d lukechugh/best-alzheimer-mri-dataset-99-accuracy -p ./dataset
+
+      # Step 5: Commit the dataset to GitHub
+      - name: Commit dataset to GitHub
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add ./dataset/*
+          git commit -m "Add Kaggle dataset"
+          git push
