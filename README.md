@@ -50,3 +50,7 @@ The notebook will display:
 - Classificatio metrics (precision, recall, F1-score)
 - Confusion matrix heatmap
 - A visual grid of predicted vs. true labels for sample test images
+
+## Spotlight Video Link
+
+Video Link: 'https://youtu.be/SO08qxXI2PU'
