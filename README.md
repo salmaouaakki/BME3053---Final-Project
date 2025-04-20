@@ -53,4 +53,4 @@ The notebook will display:
 
 ## Spotlight Video Link
 
-Video Link: 'https://youtu.be/SO08qxXI2PU'
+Video Link: https://youtu.be/SO08qxXI2PU
