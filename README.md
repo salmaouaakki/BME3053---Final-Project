@@ -7,7 +7,7 @@ This project trains a Convolutional Neural Network (CNN) to classify MRI brain i
 
 **Notebook file**: `Alzheimers_Final_Project.ipynb`  
 **Repository name**: `BME3053---Final-Project`  
-**Author**: Salma Ouaakki (GitHub username: `salmaouaakki`)
+**Authors**: Khadeejah Ahmed, Salma Ouaakki, Harshnasri Pinapala, Alyssa Collier, Madeline Osinski
 
 ## Dataset
 
